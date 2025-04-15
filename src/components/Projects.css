@@ -51,11 +51,16 @@
   background: #333333;
   padding: 15px;
   border-radius: 10px;
-  flex: 1 1 calc(33.33% - 20px); /* Ensures three cards fit side by side */
-  max-width: calc(33.33% - 20px); /* Matches flex basis for consistency */
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
   color: #e0e0e0;
   box-sizing: border-box;
-  min-width: 0; /* Prevents overflow on small screens */
+  min-width: 0;
+}
+
+[data-theme="light"] .project-card {
+  background: #f0f0f0; /* Light grey background for differentiation */
+  color: #1a1a1a;
 }
 
 .project-card h3 {
@@ -64,31 +69,31 @@
   color: #ffffff;
 }
 
+[data-theme="light"] .project-card h3 {
+  color: #d35400;
+}
+
 .project-card p {
   font-size: 1rem;
   line-height: 1.5;
 }
 
 .highlight {
-  color: #d35400;
-}
-
-[data-theme="light"] .project-card {
-  background: #ffffff;
-  color: #1a1a1a;
-}
-
-[data-theme="light"] .project-card h3 {
-  color: #d35400;
+  color: #d35400; /* Default for light mode */
 }
 
 [data-theme="light"] .highlight {
-  color: #e67e22;
+  color: #e67e22; /* Light mode highlight */
 }
 
+[data-theme="dark"] .highlight {
+  color: #fcd46c; /* Yellow highlight for dark mode */
+}
+
+/* Ensure special text remains readable */
 [data-theme="light"] .main-content p strong,
 [data-theme="light"] .main-content p {
-  color: #1a1a1a; 
+  color: #1a1a1a;
 }
 
 @media (max-width: 768px) {
@@ -97,32 +102,26 @@
     padding: 15px 10px;
     gap: 15px;
   }
-
   .main-content {
     width: 100%;
     padding: 15px;
   }
-
   .main-content h1 {
     font-size: 1.8rem;
   }
-
   .projects-grid {
-    flex-direction: row; 
-    justify-content: center; 
+    flex-direction: row;
+    justify-content: center;
   }
-
   .project-card {
-    flex: 1 1 calc(90% - 20px); 
-    max-width: 90%; 
+    flex: 1 1 calc(90% - 20px);
+    max-width: 90%;
     padding: 10px;
-    margin: 0 5px; 
+    margin: 0 5px;
   }
-
   .project-card h3 {
     font-size: 1.3rem;
   }
-
   .project-card p {
     font-size: 0.9rem;
     line-height: 1.4;
@@ -131,7 +130,7 @@
 
 @media (max-width: 480px) {
   .project-card {
-    flex: 1 1 calc(100% - 20px); 
+    flex: 1 1 calc(100% - 20px);
     max-width: 100%;
     margin: 0;
   }
