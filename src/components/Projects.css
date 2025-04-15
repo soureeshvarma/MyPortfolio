@@ -70,12 +70,20 @@
 }
 
 [data-theme="light"] .project-card h3 {
-  color: #d35400;
+  color: #000000; /* Black for project titles like "Budget Tracker" in light mode */
 }
 
 .project-card p {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.project-card p strong {
+  color: #ffffff;
+}
+
+[data-theme="light"] .project-card p strong {
+  color: #000000; /* Black for "Technologies:" in light mode */
 }
 
 .highlight {
@@ -87,12 +95,12 @@
 }
 
 [data-theme="dark"] .highlight {
-  color: #fcd46c; /* Yellow highlight in dark mode */
+  color: #fcd46c;
 }
 
 /* Ensure special text remains readable */
-[data-theme="light"] .main-content p strong,
-[data-theme="light"] .main-content p {
+[data-theme="light"] .main-content p,
+[data-theme="light"] .main-content p strong {
   color: #1a1a1a;
 }
 
@@ -112,7 +120,7 @@
   .projects-grid {
     flex-direction: row;
     justify-content: center;
-    gap: 10px; /* Tighter spacing on mobile */
+    gap: 10px;
   }
   .project-card {
     flex: 1 1 calc(90% - 10px);
