@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px;
+    background: var(--bg-color);
+    min-height: 100vh;
+    flex: 1;
+  }
+  
+  .main-content {
+    width: 65%;
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .main-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-weight: 600;
+  }
+  
+  .mode-divider {
+    border: 0;
+    height: 2px;
+    background: var(--text-color);
+  }
+  
+  [data-theme="light"] .mode-divider {
+    background: #d35400;
+  }
+  
+  [data-theme="dark"] .mode-divider {
+    background: #fcd46c;
+  }
+  
+  .highlight {
+    font-weight: 600;
+  }
+  
+  [data-theme="light"] .highlight {
+    color: #d35400; /* Brown in light mode */
+  }
+  
+  [data-theme="dark"] .highlight {
+    color: #fcd46c; /* Yellow in dark mode */
+  }
+  
+  /* Make all complete college names extra bold */
+  .main-content p {
+    font-weight: 400; /* Default weight for description text */
+  }
+  
+  .extra-bold {
+    font-weight: 800; /* Extra bold for all complete college names */
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+    .main-content {
+      width: 100%;
+    }
+  }

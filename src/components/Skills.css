@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+  background: var(--bg-color);
+  min-height: 100vh;
+  flex: 1;
+}
+
+.main-content {
+  width: 65%;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.mode-divider {
+  border: 0;
+  height: 2px;
+  background: var(--text-color);
+}
+
+[data-theme="light"] .mode-divider {
+  background: #d35400; /* Brown in light mode */
+}
+
+[data-theme="dark"] .mode-divider {
+  background: #fcd46c; /* Yellow in dark mode */
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 15px;
+  background: #333333;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  color: #e0e0e0;
+}
+
+.skill-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.skill-item strong {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.percentage {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.progress-bar {
+  width: 150px; /* Medium size */
+  height: 6px;
+  background: #444444;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+[data-theme="light"] .progress {
+  background: #d35400; /* Brown in light mode */
+}
+
+[data-theme="dark"] .progress {
+  background: #fcd46c; /* Yellow in dark mode */
+}
+
+/* Adjust for light mode */
+[data-theme="light"] .skill-item {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .progress-bar {
+  background: #cccccc;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+  .main-content {
+    width: 100%;
+  }
+  .skill-item {
+    padding: 8px 12px;
+  }
+  .skills-list {
+    gap: 12px;
+  }
+  .progress-bar {
+    width: 120px; /* Slightly smaller on mobile */
+  }
+}
