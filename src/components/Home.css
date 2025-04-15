@@ -15,7 +15,7 @@
   padding: 20px;
   box-shadow: var(--shadow);
   color: var(--text-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .main-content h1 {
@@ -29,6 +29,7 @@
   border: 0;
   height: 2px;
   background: var(--text-color);
+  margin-bottom: 20px;
 }
 
 [data-theme="light"] .mode-divider {
@@ -39,7 +40,63 @@
   background: #fcd46c;
 }
 
-.main-content p {
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+}
+
+.profile-card h2 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+.profile-card .title {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+.profile-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: var(--text-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+.about-me {
+  margin-top: 20px;
+}
+
+.about-me h2 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+.about-me p {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-color);
@@ -53,30 +110,17 @@
 }
 
 .skill-card {
-  background: #333333;
+  background: var(--card-bg);
   padding: 15px;
   border-radius: 10px;
   text-align: center;
   width: 48%;
   transition: transform 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-}
-
-[data-theme="light"] .skill-card {
-  background: #f0f0f0;
-  color: #ffffff;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
 }
 
 .skill-card [role="img"] {
   font-size: 2.2rem;
   color: var(--accent-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
   margin-bottom: 10px;
   display: block;
 }
@@ -84,54 +128,78 @@
 .skill-title {
   font-size: 1.3rem;
   margin: 10px 0;
+  color: var(--text-color);
+}
+
+[data-theme="light"] .main-content {
+  background: #f0f0f0;
+  color: #000000;
+}
+
+[data-theme="light"] .profile-card .title,
+[data-theme="light"] .skill-title {
+  color: #d35400;
+}
+
+[data-theme="light"] .skill-card {
+  background: #ffffff;
+}
+
+[data-theme="dark"] .main-content {
+  background: #333333;
   color: #ffffff;
 }
 
-[data-theme="light"] .skill-title {
-  color: #000000; /* Black text in light mode instead of brown */
+[data-theme="dark"] .profile-card .title,
+[data-theme="dark"] .skill-title {
+  color: #fcd46c;
 }
 
-.skill-card p {
-  font-size: 1rem;
-  color: #b0b0b0;
+[data-theme="dark"] .skill-card {
+  background: #444444;
 }
 
-[data-theme="light"] .skill-card p {
-  color: #ffffff; /* White text for descriptions in light mode */
+.skill-card:hover {
+  transform: translateY(-5px);
 }
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    padding: 15px 10px;
-    gap: 15px;
+    padding: 2vw 1.5vw;
+    gap: 2vw;
   }
   .main-content {
-    width: 100%;
-    padding: 15px;
+    width: 95%;
+    padding: 2vw;
   }
   .main-content h1 {
     font-size: 1.8rem;
   }
-  .main-content p {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  .profile-card h2 {
+    font-size: 1.5rem;
+  }
+  .profile-card .title {
+    font-size :1rem;
+  }
+  .profile-card p {
+    font-size: 0.9rem;
+  }
+  .about-me h2 {
+    font-size: 1.5rem;
+  }
+  .about-me p {
     font-size: 1rem;
     line-height: 1.6;
   }
   .skills {
     flex-direction: column;
-    gap: 15px;
   }
   .skill-card {
     width: 100%;
-    padding: 10px;
-  }
-  .skill-card [role="img"] {
-    font-size: 1.8rem;
-  }
-  .skill-title {
-    font-size: 1.1rem;
-  }
-  .skill-card p {
-    font-size: 0.9rem;
   }
 }
