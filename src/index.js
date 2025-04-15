@@ -8,7 +8,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/MyPortfolio">
+    <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/MyPortfolio' : '/'}>
       <ErrorBoundary>
         <App />
       </ErrorBoundary>

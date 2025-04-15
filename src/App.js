@@ -1,40 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Education from './components/Education';
-import Skills from './components/Skills'; 
-import Projects from './components/Projects'; 
+import Skills from './components/Skills';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import './App.css';
+import Sidebar from './components/Sidebar';
 
 function App() {
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark');
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
   return (
-    <Router basename="/MyPortfolio">
-      <div className="App">
-        <Navbar toggleTheme={toggleTheme} theme={theme} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="app">
+      <Sidebar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Home />} /> {/* Fallback route */}
+      </Routes>
+    </div>
   );
 }
 
