@@ -14,17 +14,19 @@ function Contact() {
           <p><strong>Phone:</strong> +91-9491052999</p>
           <p><strong>Address:</strong> Hyderabad, India</p>
         </div>
-        <form>
-          <div className="form-group">
-            <label><strong>Name:</strong></label>
-            <input type="text" name="name" />
-          </div>
-          <div className="form-group">
-            <label><strong>Message:</strong></label>
-            <textarea name="message" rows="5"></textarea>
-          </div>
-          <button type="submit">Send</button>
-        </form>
+        <div className="form-section">
+          <form>
+            <div className="form-group">
+              <label><strong>Name:</strong></label>
+              <input type="text" name="name" />
+            </div>
+            <div className="form-group">
+              <label><strong>Message:</strong></label>
+              <textarea name="message" rows="5"></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </div>
   );
