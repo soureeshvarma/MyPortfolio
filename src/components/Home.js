@@ -25,7 +25,7 @@ function Home() {
           </div>
           <div className="skill-card">
             <span role="img" aria-label="code">💻</span>
-            <h3 className="skill-title">Web Development</h3>
+            <h3 className="skill-title">Development</h3>
             <p>High-quality development of sites at the professional level.</p>
           </div>
         </div>

@@ -12,7 +12,7 @@ function Sidebar() {
           onError={(e) => { e.target.src = 'https://via.placeholder.com/120'; console.log('Image failed to load, using placeholder'); }}
         />
         <h2 className="name">Indukuri Soureesh Varma</h2>
-        <p className="title">Web Developer</p>
+        <p className="title">Developer</p>
       </div>
       <div className="contact-info">
         <p data-icon="📧"><span>soureeshvarma2004@gmail.com</span></p>
