@@ -39,34 +39,51 @@
     background: #fcd46c;
   }
   
-  .highlight {
-    font-weight: 600;
-  }
-  
-  [data-theme="light"] .highlight {
-    color: #d35400; /* Brown in light mode */
-  }
-  
-  [data-theme="dark"] .highlight {
-    color: #fcd46c; /* Yellow in dark mode */
-  }
-  
-  /* Make all complete college names extra bold */
   .main-content p {
-    font-weight: 400; /* Default weight for description text */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
   }
   
   .extra-bold {
-    font-weight: 800; /* Extra bold for all complete college names */
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .highlight {
+    color: #d35400;
+  }
+  
+  [data-theme="light"] .extra-bold {
+    color: #1a1a1a;
+  }
+  
+  [data-theme="light"] .highlight {
+    color: #e67e22;
   }
   
   @media (max-width: 768px) {
     .container {
       flex-direction: column;
-      padding: 20px;
-      gap: 20px;
+      padding: 15px 10px;
+      gap: 15px;
     }
     .main-content {
       width: 100%;
+      padding: 15px;
+    }
+    .main-content h1 {
+      font-size: 1.8rem;
+    }
+    .main-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .extra-bold {
+      font-size: 1.1rem;
+    }
+    .highlight {
+      font-size: 0.9rem;
     }
   }
