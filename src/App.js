@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Education from './components/Education';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
+import Skills from './components/Skills'; 
+import Projects from './components/Projects'; 
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/MyPortfolio">
       <div className="App">
         <Navbar toggleTheme={toggleTheme} theme={theme} />
         <Routes>
