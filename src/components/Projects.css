@@ -59,7 +59,7 @@
 }
 
 [data-theme="light"] .project-card {
-  background: #f0f0f0; /* Light grey background for differentiation */
+  background: #f0f0f0;
   color: #1a1a1a;
 }
 
@@ -79,15 +79,15 @@
 }
 
 .highlight {
-  color: #d35400; /* Default for light mode */
+  color: #d35400;
 }
 
 [data-theme="light"] .highlight {
-  color: #e67e22; /* Light mode highlight */
+  color: #e67e22;
 }
 
 [data-theme="dark"] .highlight {
-  color: #fcd46c; /* Yellow highlight for dark mode */
+  color: #fcd46c; /* Yellow highlight in dark mode */
 }
 
 /* Ensure special text remains readable */
@@ -112,9 +112,10 @@
   .projects-grid {
     flex-direction: row;
     justify-content: center;
+    gap: 10px; /* Tighter spacing on mobile */
   }
   .project-card {
-    flex: 1 1 calc(90% - 20px);
+    flex: 1 1 calc(90% - 10px);
     max-width: 90%;
     padding: 10px;
     margin: 0 5px;
@@ -130,7 +131,7 @@
 
 @media (max-width: 480px) {
   .project-card {
-    flex: 1 1 calc(100% - 20px);
+    flex: 1 1 calc(100% - 10px);
     max-width: 100%;
     margin: 0;
   }

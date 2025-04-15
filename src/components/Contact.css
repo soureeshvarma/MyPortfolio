@@ -46,6 +46,7 @@
 
 .main-content a {
   text-decoration: none;
+  color: var(--text-color);
 }
 
 form {
@@ -58,6 +59,11 @@ form {
 label {
   font-size: 1rem;
   font-weight: 500;
+  color: var(--text-color);
+}
+
+label strong {
+  margin-right: 10px;
 }
 
 input,
@@ -116,10 +122,13 @@ button:hover {
     font-size: 1.8rem;
   }
   .main-content p {
-    font-size 1rem;
+    font-size: 1rem;
   }
   form {
     gap: 12px;
+  }
+  label {
+    font-size: 0.9rem;
   }
   input,
   textarea {

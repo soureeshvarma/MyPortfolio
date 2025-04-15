@@ -64,7 +64,7 @@
 
 [data-theme="light"] .skill-card {
   background: #f0f0f0;
-  color: #1a1a1a;
+  color: #ffffff; /* White text in light mode */
 }
 
 .skill-card:hover {
@@ -97,7 +97,7 @@
 }
 
 [data-theme="light"] .skill-card p {
-  color: #ffffff; /* White text in light mode */
+  color: #ffffff; /* White text for descriptions in light mode */
 }
 
 @media (max-width: 768px) {
