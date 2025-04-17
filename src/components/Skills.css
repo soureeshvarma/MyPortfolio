@@ -19,7 +19,7 @@
   padding: 1.5vw;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: var(--text-color, #ffffff);
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
 }
 
@@ -34,7 +34,7 @@
   color: var(--text-color, #ffffff);
   font-weight: 700;
   text-align: left;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 [data-theme="light"] .main-content h1 {
@@ -84,7 +84,7 @@
 .skill-info strong {
   font-size: 1.3rem;
   font-weight: 600;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .percentage {
@@ -129,8 +129,9 @@
     gap: clamp(0.8vw, 2vw, 1vw);
   }
   .main-content {
-    width: 85%;
+    width: 92%;
     padding: clamp(0.8vw, 2vw, 1.5vw);
+    margin: 0 auto;
   }
   .main-content h1 {
     font-size: clamp(1.4rem, 4vw, 1.6rem);

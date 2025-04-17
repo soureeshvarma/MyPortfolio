@@ -19,7 +19,7 @@
   padding: 1.5vw;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: var(--text-color, #ffffff);
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
 }
 
@@ -34,7 +34,7 @@
   color: var(--text-color, #ffffff);
   font-weight: 700;
   text-align: left;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 [data-theme="light"] .main-content h1 {
@@ -92,14 +92,14 @@
   font-size: 1.3rem;
   margin: 0.5vw 0;
   font-weight: 700;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .education-item p {
   font-size: 1rem;
   margin: 0.5vw 0;
   font-weight: 500;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -108,8 +108,9 @@
     gap: clamp(0.8vw, 2vw, 1vw);
   }
   .main-content {
-    width: 90%;
+    width: 92%;
     padding: clamp(0.8vw, 2vw, 1.5vw);
+    margin: 0 auto;
   }
   .main-content h1 {
     font-size: clamp(1.4rem, 4vw, 1.8rem);
