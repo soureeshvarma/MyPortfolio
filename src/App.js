@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/MyPortfolio">
       <div className="app">
         <Navbar toggleTheme={toggleTheme} theme={theme} />
         <Routes>
@@ -31,7 +31,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/" />} /> {/* Redirect all 404s to home */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
       </div>
