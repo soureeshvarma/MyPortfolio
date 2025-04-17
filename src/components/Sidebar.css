@@ -109,17 +109,16 @@
 .social-links a:hover .social-icon {
   filter: grayscale(100%);
 }
-
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
-    padding: clamp(0.5vw, 1.5vw, 0.8vw); /* Reduced padding */
+    padding: 0.3vw; /* Minimal padding */
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .profile-section {
-    margin-bottom: clamp(0.5vw, 1.5vw, 1vw); /* Reduced margin */
+    margin-bottom: 0.3vw; /* Tighten margin */
   }
   .profile-image {
     width: clamp(70px, 20vw, 90px);
@@ -133,14 +132,14 @@
   }
   .contact-info p {
     font-size: clamp(0.8rem, 2vw, 0.9rem);
-    margin: clamp(0.3vw, 1vw, 0.6vw) 0; /* Reduced margin */
+    margin: 0.2vw 0; /* Tighten margin */
   }
   .contact-info p::before {
     font-size: clamp(1rem, 2.5vw, 1.1rem);
-    margin-right: clamp(0.3vw, 1vw, 0.6vw); /* Reduced margin */
+    margin-right: 0.2vw; /* Tighten margin */
   }
   .social-links {
-    gap: clamp(0.8vw, 2vw, 1.2vw);
+    gap: 0.8vw;
   }
   .social-icon {
     width: clamp(18px, 5vw, 20px);
