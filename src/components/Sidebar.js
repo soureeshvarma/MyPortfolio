@@ -5,10 +5,10 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="profile-section">
-        <img 
-          src={process.env.PUBLIC_URL + '/Profile.jpg'} 
-          alt="Indukuri Soureesh Varma" 
-          className="profile-image" 
+        <img
+          src={process.env.PUBLIC_URL + '/Profile.jpg'}
+          alt="Indukuri Soureesh Varma"
+          className="profile-image"
           onError={(e) => { e.target.src = 'https://via.placeholder.com/120'; console.log('Image failed to load, using placeholder'); }}
         />
         <h2 className="name">Indukuri Soureesh Varma</h2>

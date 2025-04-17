@@ -8,7 +8,7 @@ function About() {
       <Sidebar />
       <div className="main-content">
         <h1>About Me</h1>
-        <hr className="divider" />
+        <hr className="mode-divider" />
         <p>
           I’m a highly motivated Full Stack Developer from Hyderabad, India with a strong coding background seeking opportunities to utilize my expertise in crafting user-friendly interfaces and developing interactive web applications.
         </p>

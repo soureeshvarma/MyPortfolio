@@ -1,111 +1,140 @@
 .sidebar {
-    width: 25%;
-    background: var(--card-bg);
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: var(--shadow);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    color: var(--text-color);
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .profile-section {
-    margin-bottom: 30px;
-    text-align: center;
+  width: 25%;
+  background: #333333;
+  border-radius: 1vw 0 0 1vw;
+  padding: 1.5vw;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--text-color, #ffffff);
+  font-family: 'Lato', sans-serif;
+  transition: background 0.3s ease;
+}
+
+[data-theme="light"] .sidebar {
+  background: #f0f0f0;
+  color: var(--text-color, #000000);
+}
+
+.profile-section {
+  margin-bottom: 1.5vw;
+  width: 100%;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.name {
+  font-size: 1.6rem;
+  margin: 0.5vw 0;
+  color: inherit;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+}
+
+.title {
+  font-size: 1.1rem;
+  color: var(--accent-color, #fcd46c);
+  margin: 0 0 1.5vw 0;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+}
+
+[data-theme="light"] .title {
+  color: var(--accent-color, #cc5200);
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin: 0.8vw 0;
+  font-size: 1rem;
+  color: inherit;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-info p::before {
+  content: attr(data-icon);
+  margin-right: 0.8vw;
+  font-size: 1.3rem;
+  color: inherit;
+}
+
+.contact-info p[data-icon="📧"]::before { content: "📧"; }
+.contact-info p[data-icon="📞"]::before { content: "📞"; }
+.contact-info p[data-icon="📅"]::before { content: "📅"; }
+.contact-info p[data-icon="📍"]::before { content: "📍"; }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2vw;
+  margin-top: 1.5vw;
+}
+
+.social-links a {
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: filter 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+  filter: grayscale(100%);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
     width: 100%;
+    padding: clamp(0.8vw, 2vw, 1vw);
   }
-  
   .profile-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* Removed border: 2px solid var(--accent-color); */
+    width: clamp(70px, 20vw, 90px);
+    height: clamp(70px, 20vw, 90px);
   }
-  
   .name {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    color: var(--text-color);
-    font-weight: 600;
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
   }
-  
   .title {
-    font-size: 1rem;
-    color: #d35400; /* Brown in light mode */
-    margin: 0 0 20px 0;
-    font-weight: 500;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
   }
-  
-  [data-theme="dark"] .title {
-    color: #fcd46c; /* Yellow in dark mode */
-  }
-  
   .contact-info p {
-    display: flex;
-    align-items: center;
-    margin: 15px 0;
-    font-size: 1.1rem;
-    color: var(--text-color);
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    margin: clamp(0.6vw, 1.5vw, 0.8vw) 0;
   }
-  
   .contact-info p::before {
-    content: attr(data-icon);
-    margin-right: 10px;
-    font-size: 1.3rem;
-    color: var(--accent-color);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    margin-right: clamp(0.6vw, 1.5vw, 0.8vw);
   }
-  
-  .contact-info p[data-icon="📧"]::before { content: "📧"; }
-  .contact-info p[data-icon="📞"]::before { content: "📞"; }
-  .contact-info p[data-icon="📅"]::before { content: "📅"; }
-  .contact-info p[data-icon="📍"]::before { content: "📍"; }
-  
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .social-links a {
-    color: var(--accent-color);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transition: color 0.3s ease;
-    text-decoration: none;
-  }
-  
-  .social-links a:hover {
-    color: var(--text-color);
-  }
-  
   .social-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    vertical-align: middle;
-    transition: transform 0.3s ease;
+    width: clamp(18px, 5vw, 20px);
+    height: clamp(18px, 5vw, 20px);
   }
-  
-  .social-links a:hover .social-icon {
-    transform: scale(1.1);
-  }
-  
-  @media (max-width: 768px) {
-    .sidebar {
-      width: 100%;
-    }
-  }
+}

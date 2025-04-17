@@ -1,36 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 :root {
   --bg-color: #1a1a1a;
-  --text-color: #e0e0e0;
+  --text-color: #ffffff;
   --card-bg: #2c2c2c;
-  --accent-color: linear-gradient(to bottom, #000000, #fcd46c); /* Restored yellow gradient */
-  --shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  --accent-color: #fcd46c; /* Yellow for dark mode */
+  --tech-color: #fcd46c; /* Yellow for tech in dark mode */
+  --navbar-color: #fcd46c; /* Matches navbar color */
 }
 
 [data-theme="light"] {
-  --bg-color: #f5f5f5;
-  --text-color: #1a1a1a;
-  --card-bg: #ffffff;
-  --accent-color: #d35400; /* Brown/orange accent */
-  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Apply gradient as background for elements using --accent-color */
-.main-content h1,
-.main-content h2,
-.divider,
-.theme-toggle,
-.navbar ul li a,
-.skill-card [role="img"],
-.contact-info p::before,
-.social-links a,
-.main-content button,
-.profile-image {
-  background: var(--accent-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: var(--text-color); /* Ensure visibility */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f5f5f5;
+  --accent-color: #cc5200; /* Brown for light mode */
+  --tech-color: #cc5200; /* Brown for tech in light mode */
+  --navbar-color: #cc5200; /* Matches navbar color */
 }
 
 body {

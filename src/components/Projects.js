@@ -12,7 +12,7 @@ function Projects() {
         <div className="projects-grid">
           <div className="project-card">
             <h3>Budget Tracker</h3>
-            <p><strong>Technologies:</strong> <span className="highlight">HTML, CSS, JavaScript</span></p>
+            <p><strong>Technologies:</strong> <span className="tech-highlight">HTML, CSS, JavaScript</span></p>
             <p>
               • Developed a budget management tool to track income and expenses, allowing users to manage finances efficiently.<br />
               • Implemented local storage to ensure user data persists across sessions, providing a seamless experience.<br />
@@ -22,7 +22,7 @@ function Projects() {
           </div>
           <div className="project-card">
             <h3>Meme Generator</h3>
-            <p><strong>Technologies:</strong> <span className="highlight">React.js, JavaScript</span></p>
+            <p><strong>Technologies:</strong> <span className="tech-highlight">React.js, JavaScript</span></p>
             <p>
               • Created an interactive meme generation app with customizable text overlays, allowing users to create personalized memes.<br />
               • Integrated an image upload feature and API to fetch trending meme templates, enhancing user engagement.<br />
@@ -32,7 +32,7 @@ function Projects() {
           </div>
           <div className="project-card">
             <h3>Restaurant Menu App</h3>
-            <p><strong>Technologies:</strong> <span className="highlight">React.js, JavaScript</span></p>
+            <p><strong>Technologies:</strong> <span className="tech-highlight">React.js, JavaScript</span></p>
             <p>
               • Designed a responsive restaurant menu, showcasing dish categories, prices, and descriptions for a seamless and engaging user experience.<br />
               • Developed a dynamic filtering system that allows users to sort dishes by categories like vegetarian, non-vegetarian, and desserts, improving navigation efficiency.<br />
@@ -41,6 +41,7 @@ function Projects() {
             </p>
           </div>
         </div>
+        <div className="footer-space"></div> 
       </div>
     </div>
   );
