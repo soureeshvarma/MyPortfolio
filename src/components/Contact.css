@@ -130,17 +130,16 @@ button:hover {
 [data-theme="light"] button:hover {
   background: #f2b598;
 }
-
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    gap: clamp(0.8vw, 2vw, 1vw);
+    gap: clamp(0.5vw, 1.5vw, 1vw); /* Reduced gap */
   }
   .main-content {
     width: 92%;
     border-radius: 0 0 1vw 1vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: clamp(0.8vw, 2vw, 1.5vw);
+    padding: clamp(0.5vw, 1.5vw, 1vw); /* Reduced padding */
     margin: 0 auto;
   }
   .main-content h1 {
@@ -155,10 +154,10 @@ button:hover {
   .form-group input,
   .form-group textarea {
     font-size: clamp(0.9rem, 2vw, 1rem);
-    padding: clamp(0.3vw, 1vw, 0.5vw);
+    padding: clamp(0.3vw, 0.8vw, 0.5vw);
   }
   button {
     font-size: clamp(1rem, 2.5vw, 1.1rem);
-    padding: clamp(0.6vw, 1.5vw, 0.7vw) clamp(1vw, 2.5vw, 1.5vw);
+    padding: clamp(0.6vw, 1.2vw, 0.7vw) clamp(1vw, 2vw, 1.5vw);
   }
 }
