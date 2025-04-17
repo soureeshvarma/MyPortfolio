@@ -35,7 +35,7 @@
   color: var(--text-color, #ffffff);
   font-size: 1.2rem;
   font-weight: 700;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   transition: color 0.3s ease;
   position: relative;
 }
@@ -69,7 +69,7 @@
 }
 
 [data-theme="light"] .nav-content ul li a.initial-active {
-  color: gold;
+  color: var(--accent-color, #cc5200); /* Fixed to match light mode */
   font-weight: 800;
 }
 
@@ -87,7 +87,7 @@
 }
 
 [data-theme="light"] .nav-content ul li a.initial-active::after {
-  background: gold;
+  background: var(--accent-color, #cc5200); /* Sync with light mode */
 }
 
 [data-theme="light"] .nav-content ul li a.active::after {
