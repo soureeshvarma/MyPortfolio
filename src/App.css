@@ -24,14 +24,14 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* Remove min-height to let content dictate height */
 }
 
 .App {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex: 1;
+  /* Remove min-height to avoid forcing extra space */
 }
 
 .App > * {
