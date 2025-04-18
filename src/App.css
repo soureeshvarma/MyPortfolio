@@ -5,7 +5,7 @@
   --accent-color: #fcd46c;
   --tech-color: #fcd46c;
   --navbar-color: #fcd46c;
-  --content-padding: 1vw; /* Small gap for content */
+  --content-padding: 1vw;
 }
 
 [data-theme="light"] {
@@ -42,11 +42,12 @@ body {
   flex-direction: column;
   flex: 1 0 auto;
   width: 100%;
+  min-height: calc(100vh - 60px); /* Adjust based on footer height */
 }
 
 main {
   flex: 1 0 auto;
-  padding-bottom: 3vw; /* Increased buffer to push footer down */
+  padding-bottom: 4vw; /* Increased buffer to push footer */
   width: 100%;
 }
 
@@ -57,14 +58,14 @@ footer {
   background: var(--card-bg);
   color: var(--text-color);
   text-align: center;
+  height: 60px; /* Set a fixed height for consistency */
 }
 
-/* Adjust content with small gap */
 .container {
   display: flex;
   flex: 1;
   gap: 0;
-  padding: var(--content-padding); /* Add small gap around content */
+  padding: var(--content-padding);
   margin: 0;
   width: 100%;
   box-sizing: border-box;
@@ -94,7 +95,7 @@ a:hover {
   .container {
     flex-direction: column;
     gap: 0;
-    padding: var(--content-padding); /* Small gap on mobile */
+    padding: var(--content-padding);
     margin: 0;
     width: 100%;
   }
@@ -106,5 +107,11 @@ a:hover {
     padding: 0.2vw;
     width: 100%;
     box-sizing: border-box;
+  }
+  .App-wrapper {
+    min-height: calc(100vh - 50px); /* Adjust for mobile footer height */
+  }
+  footer {
+    height: 50px; /* Adjusted height for mobile */
   }
 }
