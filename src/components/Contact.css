@@ -133,39 +133,39 @@ button:hover {
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    gap: 0; /* Remove gap */
-    min-height: auto; /* Let content dictate height */
+    gap: 1vw; /* Matches Home.css gap */
+    min-height: 100vh; /* Consistent with other pages */
   }
   .main-content {
-    width: 92%;
-    padding: 0.5vw; /* Minimal padding */
+    width: 75%; /* Matches desktop, adjusts to 92% on mobile like others */
+    padding: 1.5vw; /* Consistent padding */
     margin: 0 auto;
-    border-radius: 0;
-    box-shadow: none; /* Remove shadow to save space */
+    border-radius: 0 0 1vw 1vw; /* Matches Projects.css */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3); /* Consistent shadow */
   }
   .main-content h1 {
     font-size: clamp(1.4rem, 4vw, 1.8rem);
-    margin: 0.3vw 0; /* Tighten margin */
+    margin: 0.5vw 0; /* Matches Home.css */
   }
   .mode-divider {
-    margin: 0.2vw 0;
-    height: 0.15vw;
+    margin: 0.5vw 0;
+    height: 0.2vw;
   }
   .contact-details p {
     font-size: clamp(1rem, 2.5vw, 1.1rem);
-    margin: 0.2vw 0;
+    margin: 0.4vw 0;
   }
   .form-group label {
     font-size: clamp(1rem, 2.5vw, 1.1rem);
-    margin: 0.2vw 0;
+    margin: 0.3vw 0;
   }
   .form-group input,
   .form-group textarea {
     font-size: clamp(0.9rem, 2vw, 1rem);
-    padding: 0.3vw;
+    padding: 0.5vw;
   }
   button {
     font-size: clamp(1rem, 2.5vw, 1.1rem);
-    padding: 0.6vw 1vw;
+    padding: 0.7vw 1.5vw;
   }
 }

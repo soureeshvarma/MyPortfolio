@@ -125,40 +125,40 @@
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    gap: 0; /* Remove gap */
-    min-height: auto; /* Let content dictate height */
+    gap: 1vw; /* Matches Home.css gap */
+    min-height: 100vh; /* Consistent with other pages */
   }
   .main-content {
-    width: 92%;
-    padding: 0.5vw; /* Minimal padding */
+    width: 75%; /* Matches desktop, adjusts to 92% on mobile like others */
+    padding: 1.5vw; /* Consistent padding */
     margin: 0 auto;
-    border-radius: 0;
-    box-shadow: none; /* Remove shadow to save space */
+    border-radius: 0 0 1vw 1vw; /* Matches Projects.css */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Consistent shadow */
   }
   .main-content h1 {
     font-size: clamp(1.4rem, 4vw, 1.6rem);
-    margin: 0.3vw 0; /* Tighten margin */
+    margin: 0.5vw 0; /* Matches Home.css */
   }
   .mode-divider {
-    margin: 0.2vw 0;
-    height: 0.15vw;
+    margin: 0.5vw 0;
+    height: 0.2vw;
   }
   .skills-list {
-    margin-top: 0.2vw;
+    margin-top: 0.5vw;
   }
   .skill-item {
-    margin: 0.5vw 0;
-    padding: 0.5vw;
-    gap: 0.2vw;
+    margin: 1.2vw 0;
+    padding: 1vw 0.8vw;
+    gap: 0.5vw;
   }
   .skill-info strong {
     font-size: clamp(1rem, 3vw, 1.1rem);
   }
   .percentage {
     font-size: clamp(0.8rem, 2vw, 0.9rem);
-    margin-left: 0.2vw;
+    margin-left: 0.5vw;
   }
   .progress-bar {
-    height: 0.3vw;
+    height: 0.6vw;
   }
 }
