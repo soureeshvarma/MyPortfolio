@@ -24,21 +24,24 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure full height for footer */
+  min-height: 100vh; /* Ensure full height */
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure the app takes full height */
+  min-height: 100vh; /* Ensure full height */
 }
 
-.App > * {
-  flex: 0 0 auto; /* Prevent stretching */
+.App-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; /* Grow to fill space */
 }
 
 main {
-  flex: 1 0 auto; /* Let main content grow but not shrink */
+  flex: 1 0 auto; /* Push footer down */
+  padding-bottom: 2vw; /* Add space above footer if needed */
 }
 
 footer {
@@ -47,7 +50,7 @@ footer {
   padding: 1vw 0;
   background: var(--card-bg);
   color: var(--text-color);
-  text-align: center; /* Center the footer text */
+  text-align: center;
 }
 
 a {
