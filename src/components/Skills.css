@@ -130,7 +130,7 @@
   }
   .main-content {
     width: 92%;
-    padding: 0.2vw; /* Match App.css mobile padding */
+    padding: 0.2vw; 
     margin: 0 auto;
     border-radius: 0 0 1vw 1vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);

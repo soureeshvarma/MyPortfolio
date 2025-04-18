@@ -62,7 +62,6 @@
   color: #cc5200;
 }
 
-/* Initial active style for Home on load */
 .nav-content ul li a.initial-active {
   color: var(--accent-color, #fcd46c);
   font-weight: 800;
@@ -73,7 +72,6 @@
   font-weight: 800;
 }
 
-/* Underline effect for initial-active and active links */
 .nav-content ul li a.initial-active::after,
 .nav-content ul li a.active::after {
   content: '';
