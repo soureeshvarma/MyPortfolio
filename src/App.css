@@ -24,7 +24,7 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure full height for footer positioning */
+  min-height: 100vh; /* Ensure full height for footer */
 }
 
 .App {
@@ -34,16 +34,20 @@ body {
 }
 
 .App > * {
-  flex: 0 0 auto; /* Remove stretching, let content dictate height */
+  flex: 0 0 auto; /* Prevent stretching */
+}
+
+main {
+  flex: 1 0 auto; /* Let main content grow but not shrink */
 }
 
 footer {
   flex-shrink: 0;
   width: 100%;
-  /* Add some padding or styling if needed, e.g., */
   padding: 1vw 0;
   background: var(--card-bg);
   color: var(--text-color);
+  text-align: center; /* Center the footer text */
 }
 
 a {
