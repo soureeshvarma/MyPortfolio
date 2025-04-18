@@ -138,7 +138,7 @@ button:hover {
   }
   .main-content {
     width: 92%;
-    padding: 0.3vw;
+    padding: 0.2vw; /* Match App.css mobile padding */
     margin: 0 auto;
     border-radius: 0 0 1vw 1vw;
     box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);

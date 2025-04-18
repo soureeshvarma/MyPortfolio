@@ -24,24 +24,24 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure full height */
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensure full height */
 }
 
 .App-wrapper {
   display: flex;
   flex-direction: column;
-  flex: 1 0 auto;
+  flex: 1 0 auto; /* Grow to fill space */
 }
 
 main {
-  flex: 1 0 auto;
-  padding-bottom: 2vw;
+  flex: 1 0 auto; /* Push footer down */
+  padding-bottom: 2vw; /* Buffer above footer */
 }
 
 footer {
@@ -57,16 +57,16 @@ footer {
 .container {
   display: flex;
   flex: 1;
-  gap: 0.5vw;
-  padding-top: 0.5vw; /* Reduce top padding to minimize gap */
+  gap: 0; /* Remove gap between sidebar and main */
+  padding-top: 0; /* Eliminate top padding */
 }
 
 .sidebar {
-  padding: 0.5vw; /* Reduce sidebar padding */
+  padding: 0.3vw; /* Minimal padding */
 }
 
 .main-content {
-  padding: 0.5vw; /* Reduce main content padding */
+  padding: 0.3vw; /* Minimal padding */
 }
 
 a {
@@ -85,9 +85,9 @@ a:hover {
     padding-top: 0; /* No top padding on mobile */
   }
   .sidebar {
-    padding: 0.3vw;
+    padding: 0.2vw; /* Even tighter on mobile */
   }
   .main-content {
-    padding: 0.3vw;
+    padding: 0.2vw; /* Even tighter on mobile */
   }
 }
