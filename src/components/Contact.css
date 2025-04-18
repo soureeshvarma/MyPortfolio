@@ -134,14 +134,14 @@ button:hover {
   .container {
     flex-direction: column;
     gap: 0; /* Remove gap */
-    min-height: auto; /* Allow content to dictate height */
+    min-height: auto; /* Let content dictate height */
   }
   .main-content {
     width: 92%;
     padding: 0.5vw; /* Minimal padding */
     margin: 0 auto;
     border-radius: 0;
-    box-shadow: none; /* Remove shadow to reduce space */
+    box-shadow: none; /* Remove shadow to save space */
   }
   .main-content h1 {
     font-size: clamp(1.4rem, 4vw, 1.8rem);

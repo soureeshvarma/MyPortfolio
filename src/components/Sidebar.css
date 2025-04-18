@@ -118,7 +118,7 @@
     align-items: center;
   }
   .profile-section {
-    margin-bottom: 0.3vw; /* Tighten margin */
+    margin-bottom: 0.3vw; /* Reduced margin */
   }
   .profile-image {
     width: clamp(70px, 20vw, 90px);
@@ -132,11 +132,11 @@
   }
   .contact-info p {
     font-size: clamp(0.8rem, 2vw, 0.9rem);
-    margin: 0.2vw 0; /* Tighten margin */
+    margin: 0.2vw 0; /* Tightened margin */
   }
   .contact-info p::before {
     font-size: clamp(1rem, 2.5vw, 1.1rem);
-    margin-right: 0.2vw; /* Tighten margin */
+    margin-right: 0.2vw; /* Tightened margin */
   }
   .social-links {
     gap: 0.8vw;
