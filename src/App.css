@@ -25,23 +25,27 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure full height */
+  width: 100%; /* Ensure body takes full width */
 }
 
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure full height */
+  width: 100%; /* Ensure App takes full width */
 }
 
 .App-wrapper {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto; /* Grow to fill space */
+  width: 100%; /* Ensure wrapper takes full width */
 }
 
 main {
   flex: 1 0 auto; /* Push footer down */
   padding-bottom: 2vw; /* Buffer above footer */
+  width: 100%; /* Ensure main takes full width */
 }
 
 footer {
@@ -53,20 +57,25 @@ footer {
   text-align: center;
 }
 
-/* Tighten the gap across all pages */
+/* Tighten the gap and remove side gaps */
 .container {
   display: flex;
   flex: 1;
   gap: 0; /* Remove gap between sidebar and main */
-  padding-top: 0; /* Eliminate top padding */
+  padding: 0; /* Remove all padding */
+  margin: 0; /* Remove all margins */
+  width: 100%; /* Ensure container takes full width */
 }
 
 .sidebar {
   padding: 0.3vw; /* Minimal padding */
+  width: auto; /* Let it size naturally */
 }
 
 .main-content {
   padding: 0.3vw; /* Minimal padding */
+  width: 100%; /* Ensure it fills available space */
+  box-sizing: border-box; /* Include padding in width */
 }
 
 a {
@@ -82,12 +91,17 @@ a:hover {
   .container {
     flex-direction: column;
     gap: 0;
-    padding-top: 0; /* No top padding on mobile */
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
   .sidebar {
-    padding: 0.2vw; /* Even tighter on mobile */
+    padding: 0.2vw;
+    width: 100%; /* Full width on mobile */
   }
   .main-content {
-    padding: 0.2vw; /* Even tighter on mobile */
+    padding: 0.2vw;
+    width: 100%; /* Full width on mobile */
+    box-sizing: border-box;
   }
 }
