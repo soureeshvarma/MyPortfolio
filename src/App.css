@@ -24,21 +24,23 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure full height for footer */
+  min-height: 100vh; /* Ensure full height */
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure the app takes full height */
+  min-height: 100vh; /* Ensure full height */
 }
 
-.App > * {
-  flex: 0 0 auto; /* Prevent stretching */
+.App-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; /* Let wrapper grow but not shrink */
 }
 
 main {
-  flex: 1 0 auto; /* Let main content grow but not shrink */
+  flex: 1 0 auto; /* Ensure main content pushes footer down */
 }
 
 footer {
